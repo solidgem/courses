@@ -11,8 +11,15 @@
 * Настройка цветовой схемы, синонимов
 * Регистрация на github
 
-## rack & sinatra
-https://github.com/solidgem/workshops/blob/master/002-rack-and-rails-with-bundler.md
+## Пишем простое web-приложение
+
+* знакомимся с rack, sinatra
+* знакомимся с gem, bundler
+* пишем hello world rack приложение в одном файле
+* пишем приложение с через тесты
+* hellow-world на sinatra
+* middlewere
+* haml
 
 # 3 занятие
 ## рассказать про задание
@@ -27,6 +34,7 @@ https://github.com/solidgem/workshops/blob/master/002-rack-and-rails-with-bundle
 ## Добавление пользователя
 
 * модель
+* валидации
 * регистрция
 * авторизация
 * вывод списка пользователей за исключением себя
@@ -35,9 +43,12 @@ https://github.com/solidgem/workshops/blob/master/002-rack-and-rails-with-bundle
 # 4 занятие
 ## добаляем сообщения
 
-Message, можно отправить сообщение любому пользователю, за исключением себя
-
-Кнопки(начать диалог, продолжить диалог), выборки, N+1, уникальный индекс, counter_culture
+* модель
+* валидации
+* интерфейс(кнопки: начать диалог, продолжить диалог)
+* Message, можно отправить сообщение любому пользователю, за исключением себя
+* уникальный индекс
+* выборки, N+1, уникальный индекс, counter_culture
 
 # 5 занятие
 ## Real-time
