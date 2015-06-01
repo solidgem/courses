@@ -1,8 +1,8 @@
 # Во время курса вы:
-* освоите ruby
-* создадите real-time чат на ruby on rails и websockets
 * освоите git
+* освоите ruby
 * научитесь разрабатывать через тесты
+* создадите real-time чат на ruby on rails и websockets
 
 # 1 занятие. 
 
