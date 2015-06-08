@@ -26,3 +26,5 @@
 * пишем тест(дергаем /, проверяем 200)
 * пишем приложение
 * пишем middleware
+
+https://github.com/rack/rack/blob/master/lib/rack/builder.rb
