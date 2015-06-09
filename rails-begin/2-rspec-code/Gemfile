@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+
+# эти гемы доступны только в тестах
+group :test do
+  gem "rspec"
+end
