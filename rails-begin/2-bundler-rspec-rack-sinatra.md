@@ -1,9 +1,21 @@
+# Дома
+
+Пользователям Windows поставить Ubuntu или второй системой, или в VirtualBox.
+
+Пользователям Ubuntu нужно сделать следующее для установки ruby:
+
+* gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+* curl -sSL https://get.rvm.io | bash -s stable --ruby
+* https://rvm.io/integration/gnome-terminal
+
+Пользователям Mac OS X можно поставить или rvm или rbenv.
+
+В итоге должен установиться ruby версии выше 2.0.
+
 # Подготовка
 
 * разбор rubymonk
-* установка ruby(rvm.io)
-
-**TODO: Инструкция по установке rvm**
+* разбор проблем с установкой ruby
 
 # Вводная
 
