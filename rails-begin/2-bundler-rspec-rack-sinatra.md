@@ -17,26 +17,74 @@
 * разбор rubymonk
 * разбор проблем с установкой ruby
 
-# Вводная
+# Теория
 
-Кратко рассказать про урок:
-
-* что такое http, модель запрос-ответ, state-less, методы, заголовки, коды ответа
-* что такое rack, sinatra
-* пакеты в ruby: gem, bundler
-* что такое TDD, Rspec
+* http
+  * модель запрос-ответ
+  * state-less
+  * методы
+  * коды ответа
+  * тело ответа
+  * заголовки
+* http и ruby
+  * вебсерверы на ruby(висят в памяти)
+  * rack
+    * приложение
+    * middleware
+    * анология с декораторами
+    * примеры: live-reload, логирование, обработка ошибок, batch запросы
+  * sinatra
+  * rails
+  * остальные фреймворки
+* тестирование
+  * TDD
+  * BDD
+  * Rspec
+* пакеты в ruby
+  * gem
+  * bundler
 
 # Rspec
 
-* начинаем проект
-* ставим rspec
-* изучаем DSL
+* клонируем репозиторий `git clone git@github.com:solidgem/courses.git`
+* смотрим все файлики и комментарии в директории `2-rspec-code`
+* разбираем структуру проекта
+* пишем тесты на оставшиеся методы
 
 # Rack
 
-* рассказать подробно про Rack (приложение, middleware, вебсервер)
-* пишем тест(дергаем /, проверяем 200)
-* пишем приложение
-* пишем middleware
+* смотрим все файлики и комментарии в директории `2-rack-code`
+* в корне запускаем bundle (установка библиотек)
+* запускаем тесты командой rspec
+* правим приложение
+* запускаем командой rackup
+* пишем middleware, которая добавляет в конец текущую дату(для подключения используем [RackBuilder](https://github.com/rack/rack/blob/master/lib/rack/builder.rb))
 
-https://github.com/rack/rack/blob/master/lib/rack/builder.rb
+# Sinatra
+
+* [Sinatra readme](https://github.com/sinatra/sinatra)
+* [Модульные приложения](https://github.com/sinatra/sinatra#sinatrabase---middleware-libraries-and-modular-apps)
+
+``` ruby
+
+# Gemfile
+# указываем require, что бы не загрязнять объект main неиспользуемым DSL.
+gem "sinatra", require: "sinatra/base"
+
+# lib/app.rb
+
+class App < Sinatra::Application
+  # ...
+end
+```
+
+* прикручиваем gem 'haml' и делаем простенький шаблон
+
+# Собираем сложное приложение
+
+* переименовываем App => BaseApp
+* подключаем лобстер: `require 'rack/lobster'`
+* с помощью RackBuilder собираем сложное приложение
+  * по / доступен RackBuilder
+  * по /lobster доступен лобстер  (Rack::Lobster.new)
+* играемся с middleware
