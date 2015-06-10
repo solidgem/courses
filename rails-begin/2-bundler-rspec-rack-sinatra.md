@@ -12,6 +12,14 @@
 
 В итоге должен установиться ruby версии выше 2.0.
 
+# Ссылки
+
+* [Быстрое вступление в rack](http://habrahabr.ru/post/131429/)
+* [Rack](http://rack.github.io/)
+* [Sinatra](http://www.sinatrarb.com/)
+* [Gem глазами потребителя](http://nashbridges.me/gem-for-end-user)
+* [Bundler](http://bundler.io/)
+
 # Подготовка
 
 * разбор rubymonk
@@ -72,7 +80,6 @@
 gem "sinatra", require: "sinatra/base"
 
 # lib/app.rb
-
 class App < Sinatra::Application
   # ...
 end
